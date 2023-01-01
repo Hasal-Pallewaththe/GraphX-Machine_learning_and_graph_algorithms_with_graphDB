@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+    neo4j:
+        build: .
+        image: show-lst-neo4j
+        container_name: neo4j-ser      # container name
+        ports:
+            - "7475:7474"                    # host port (my computer):internal port(docker container) eg-: 8080:80
+            - "7687:7687"
+        environment:
+            - NEO4J_HOME=/var/lib/neo4j
+            - NEO4J_dbms_memory_pagecache_size=1G
+            - NEO4J_dbms_memory_heap_maxSize=1G
+            - NEO4J_dbms_memory_heap_initialSize=512M
+        network_mode: "bridge"
+                                                # command: bash neo4j-admin load --from=import/neo4j-db1.dump --database=neo4j --force         # this is a command similar to dockerfile CMD
