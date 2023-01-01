@@ -1,0 +1,34 @@
+node {
+  diameter: 100px;
+  color: #A5ABB6;
+  border-color: #FFF0F4;
+  border-width: 1px;
+  text-color-internal: #FFFFFF;
+  font-size: 10px;
+}
+relationship {
+  color: #A5ABB6;
+  shaft-width: 1px;
+  font-size: 12px;
+  padding: 3px;
+  text-color-external: #000000;
+  text-color-internal: #FFFFFF;
+  caption: "<type>";
+}
+node.* {
+  color: #C990C0;
+  border-color: #b261a5;
+  text-color-internal: #FFFFFF;
+  defaultCaption: "<id>";
+}
+
+node.Rating {
+  color: #9A7A36;
+  border-color: #447666;
+  text-color-internal: #FFFFFF;
+  caption: "{rating}";
+}
+node.Movie {
+  color: #36839A;
+  caption: "{title}";
+}
